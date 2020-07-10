@@ -7,7 +7,7 @@ var_parameter=$2
 ## functions
 jkam_lando_local_import_db()
 {
-	lando drush sqlc < $var_parameter && lando drush cr && lando drush cim -y && lando drush cr && lando drush uli
+    lando drush sqlc < $var_parameter && lando drush cr && lando drush cim -y && lando drush updb -y && lando drush cr && lando drush uli
 }
 
 ## Personal commands
